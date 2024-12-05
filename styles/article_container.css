@@ -90,7 +90,7 @@
         }
 
         section{
-            p, a{
+            p, a:not(.article_link){
                 font-family: 'Tiempos Text', sans-serif;
                 font-size: 16px;
                 line-height: 1.7em;
@@ -106,7 +106,7 @@
                 transition: 0.2s ease;
             }
 
-            a{
+            a:not(.article_link){
                 color: var(--red);
                 position: relative;
                 &:after{
@@ -406,6 +406,7 @@
                             display: flex;
                             flex-wrap: wrap;
                             justify-content: space-between;
+                            transition: none;
                         }
 
                         @media (min-width: 380px){
@@ -418,6 +419,17 @@
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
+                        }
+                    }
+                    a.article_link{
+                        color: inherit;
+                        &:hover, &:focus{
+                            .articlecontent{
+                                background-color: var(--red);
+                                > *, > .meta p, time {
+                                    color: var(--white) !important;
+                                }
+                            }
                         }
                     }
 

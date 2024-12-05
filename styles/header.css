@@ -235,6 +235,35 @@ body{
                             a{
                                 line-height: 2.5em;
                                 font-size: 13px;
+                                &.link_leeslijst{
+                                    position: relative;
+                                    span.counter{
+                                        position: absolute;
+                                        border: 1px solid var(--black);
+                                        background-color: var(--red);
+                                        color: var(--white);
+                                        font-size: 10px;
+                                        width: 15px;
+                                        height: 15px;
+                                        left: calc(100% - 1px);
+                                        top: -6px;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        &[count="0"]{
+                                            display: none;
+                                        }
+                                    }
+                                    
+                                    .counter::before {
+                                        content: attr(data-count);
+                                        color: var(--white);
+                                    }
+                                }
+                            }
+                            .link_leeslijst:has(.counter[data-count="0"]){
+                                display: none !important;
                             }
                         }
                     }
@@ -276,6 +305,7 @@ body{
                                         transform-origin: bottom left;
                                     }
                                 }
+                                
                             }
                         }
                     }
@@ -290,7 +320,7 @@ body{
                         top: 0;
                         justify-content: flex-start;
                         padding-bottom: 30px;
-                        border-bottom: 1px solid #e1e1e1e1;
+                        border-bottom: 1px solid var(--light-border)e1;
                         li{
                             a{
                                 line-height: 2.5em;
@@ -326,7 +356,6 @@ body{
                             position: absolute;
                             border: 1px solid var(--black);
                             background-color: var(--red);
-                            color: var(--white);
                             font-size: 10px;
                             width: 15px;
                             height: 15px;
@@ -336,59 +365,146 @@ body{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            &[count="0"]{
+                            &[data-count="0"]{
                                 display: none;
                             }
                         }
+                        .counter::before {
+                            content: attr(data-count);
+                            color: var(--white);
+                        }
                         
                     }
-                    li:has(.link_leeslijst) .tooltip_leeslijst{
-                        display: none;
-                        position: absolute;
-                        top: 100%;
-                        z-index: 99;
-                        padding: 16px;
-                        background-color: #E1E1E1;
-                        max-width: 200px;
-                        width: 200px;
-                        .one_tooltip_article{
-                            padding: 8px 0 12px 0;
-                            &:first-child{
-                                padding-top: 0;
-                            }
-                            &:last-child{
-                                padding-bottom: 30px;
-                            }
-                            h4, p{
-                                max-width: 160px;
-                                font-size: 12px;
-                            }
-                            h4{
-                                text-transform: uppercase;
-                                margin-bottom: 4px;
-                            }
-                            p{
-                                line-height: 125%;
-                            }
-                        }
-                        a.tooltip_btn{
-                            color: var(--white);
-                            display: block;
-                            padding: 2px 1.5em;
-                            line-height: 2em;
-                            background-size: 100% 200%;
-                            transition: 0.3s ease;
-                            background-position: bottom;
-                            background-image: linear-gradient(var(--red) 50%, var(--black) 50%);
-                            width: fit-content;
+                    .link_leeslijst:has(.counter[data-count="0"]), .link_leeslijst:has(.counter[data-count="0"]) + .tooltip_leeslijst{
+                        display: none !important;
+                    }
+                    li:has(.link_leeslijst) {
+                        position: relative;
+                        .tooltip_leeslijst{
+                            display: none;
+                            position: absolute;
+                            left: 50%;
+                            top: calc(100% + 37px);
+                            translate: -50% 0;
+                            z-index: 99;
+                            padding: 16px;
+                            background-color: var(--light-border);
+                            max-width: 230px;
+                            width: 230px;
+                            border: 2px solid;
                             border-radius: 2px;
-                            &:hover,
-                            &:focus{
-                                background-position: top;
+                            .one_tooltip_article{
+                                padding: 8px 0 12px 0;
+                                &:not(:last-of-type){
+                                    border-bottom: 1px solid var(--black);
+                                }
+                                &:first-child{
+                                    padding-top: 0;
+                                }
+                                &:last-of-type{
+                                    padding-bottom: 30px;
+                                }
+                                a{
+                                    color: var(--black);
+                                    position: relative;
+                                    > *{
+                                        transition: color 0.1s ease;
+                                    }
+                                    h4, p{
+                                        font-size: 12px;
+                                    }
+                                    h4{
+                                        text-transform: uppercase;
+                                        margin-bottom: 4px;
+                                        letter-spacing: 2px;
+                                        max-width: 180px;
+                                    }
+                                    p{
+                                        line-height: 125%;
+                                        letter-spacing: 0.5px;
+                                        max-width: 153px;
+                                    }  
+                                    &:hover, &:focus > *{
+                                        color: var(--red);
+                                        > * {
+                                            fill: var(--red);
+                                        }
+                                    }
+                                    .chev_right{
+                                        width: 9px;
+                                        height: 16px;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 50%;
+                                        translate: 0 -50%;
+                                        fill: var(--black);
+                                        stroke: var(--black);
+                                        > *{
+                                            fill: var(--black);
+                                            stroke: var(--black);
+                                        }
+
+                                    }
+                                }
+
                             }
-                        }
-                        &.active_tooltip{
-                            display: block;
+                            .tooltip_triangle{
+                                width: 0;
+                                height: 0;
+                                bottom: 100%;
+                                left: 50%;
+                                border-left: 23px solid transparent;
+                                border-right: 23px solid transparent;
+                                border-bottom: 34px solid var(--black);
+                                position: absolute;
+                                transform: translateX(-50%);
+                                &:after{
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 26px solid transparent;
+                                    border-right: 26px solid transparent;
+                                    border-bottom: 38px solid var(--light-border);
+                                    position: absolute;
+                                    top: 3px;
+                                    left: -26px;
+                                }
+                            }
+                            .tooltip_close{
+                                position: absolute;
+                                right: 16px;
+                                cursor: pointer;
+                                z-index: 10;
+                                &:hover, &:focus{
+                                    &:before, &:after{
+                                        display: none;
+                                    }
+                                    svg, svg > *{
+                                        stroke: var(--red);
+                                    }
+                                }
+                            }
+                            a.tooltip_btn{
+                                color: var(--white);
+                                display: block;
+                                padding: 2px 1.5em;
+                                line-height: 2em;
+                                background-size: 100% 200%;
+                                transition: 0.3s ease;
+                                background-position: bottom;
+                                background-image: linear-gradient(var(--red) 50%, var(--black) 50%);
+                                width: fit-content;
+                                border-radius: 2px;
+                                margin: 0 auto;
+                                letter-spacing: 1px;
+                                &:hover,
+                                &:focus{
+                                    background-position: top;
+                                }
+                            }
+                            &.active_tooltip{
+                                display: block;
+                            }
                         }
                     }
                 }

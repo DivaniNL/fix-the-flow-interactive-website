@@ -1,0 +1,17 @@
+body#leesLijst {
+    .grid_giver {
+        grid-template-columns: minmax(1.33rem, 1fr) minmax(0, 818px) minmax(1.33em, 1fr); /* reduce content of contact form to 818px instead of 1520px */
+    }
+    .shape_green{
+        bottom: calc(100% - 235px);
+        top: unset;
+        display: block !important;
+        @media (min-width: 860px){
+         bottom: calc(100% - 335px);
+        }
+        &.success{
+          bottom: unset;
+          top: 0;
+        }
+       }
+}

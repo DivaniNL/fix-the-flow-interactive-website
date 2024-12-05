@@ -43,7 +43,7 @@ a{
     --grey-text: #7B7B7A;
     --dark-grey: #747474;
     --dark-grey-text: #7A7A7A;
-    --light-border: #E1E1E1;
+    --light-border: #e1e1e1;
     --red: #E85340;
     --light-red: #F9D4CF;
     --lighter-red: #F9CDC8;
@@ -77,6 +77,16 @@ a{
 .hidden_title{
     font-size: 0;
 }
+.desktop_hidden {
+    @media (min-width: 860px) {
+     display: none !important;
+    }
+   }
+   .mobile_hidden {
+    @media (max-width: 859px) {
+     display: none !important;
+    }
+   } 
 button, 
 input[type="submit"], 
 input[type="reset"] {
@@ -159,3 +169,56 @@ header + main{
 .skip-to-content-link:focus {
     transform: translate(-50%, 0%);
 }
+
+.shape_green {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: calc(100% + 0px);
+    left: 0px;
+    height: calc(100% + 49px);
+    height: calc(100% + 59px);
+    z-index: -2;
+   
+    .filter-effect {
+     filter: url(#filter0_d_42_1068);
+     @media (min-width: 860px) {
+      filter: none;
+     }
+    }
+   
+    path {
+     @media (min-width: 860px) {
+      stroke: transparent;
+   
+     }
+    }
+    @media (min-width: 860px){
+     display: block;
+    }
+    @media (min-width: 1100px){
+     height: calc(100% + 49px);
+    }
+   }
+   
+.grid_giver {
+    margin: 0 0 1.25rem 0;
+    display: grid;
+    grid-template-columns: minmax(1.33rem, 1fr) minmax(0, 1520px) minmax(1.33em, 1fr); /* make the content in column 2 a max opf 1520px. Devide the space to the right with a margin on the sides of 1.33em */
+   }
+   .grid_receiver {
+    grid-column: 2 / 2; /* make this the second column - > see line 61 */
+   }
+   .grid_giver_desktop {
+    margin: 0 0 1.25rem 0;
+    @media (min-width: 860px) {
+     position: relative;
+     display: grid;
+     grid-template-columns: minmax(1.33rem, 1fr) minmax(0, 1520px) minmax(1.33em, 1fr);
+    }
+   }
+   .grid_receiver_desktop {
+    @media (min-width: 860px) {
+     grid-column: 2 / 2;
+    }
+   }
