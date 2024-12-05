@@ -35,14 +35,8 @@ if (tooltipCloseButton) {
         leesLijstTooltip.classList.remove('active_tooltip');
     });
 }
-// ////////////////
-// Als je op de leeslijst pagina bent wordt de localstorage uitgelezen.
-// Als er nog niks in de leeslijst zit, laat dan een bericht zien wat dit duidelijk maakt.(empty state) 
-// Als er iets in de leeslijst zit, haal de leeslijst op met LocalStorage.GetItem en plaats voor elk item in de array een article element.
 
-
-
-// Lees leeslijst uit in de header
+// Lees leeslijst uit in de header en update count
 function readLocalStorage() {
     // Fetch the leeslijst from localStorage
     let leesLijstFetched = JSON.parse(localStorage.getItem('leeslijst')) || [];
@@ -50,34 +44,34 @@ function readLocalStorage() {
     const tooltipBtn = document.querySelector('.tooltip_btn');
     const leeslijstPage = document.querySelector('body#leesLijst .leesLijst')
 
-    // Clear the current contents of the tooltip container (except for the tooltip button)
+    // Haal alle huidige artikelen uit de tooltip
     const articles = tooltipContainer.querySelectorAll('.one_tooltip_article');
     articles.forEach(article => article.remove());
 
-    // Update the count of items
+    // Update het aantal items
     let leeslijstCount = leesLijstFetched.length;
 
-    // Loop through each item in the leeslijst
-    leesLijstFetched.forEach(leesLijstFetchedItem => {
-        // Check if the item contains the required properties (Title, Author, Link, ID)
+     // Loop door de json heen
+     leesLijstFetched.forEach(leesLijstFetchedItem => {
+        // Check of het artikel de benodigheden heeft (Title, Author, Link, ID)
         if (leesLijstFetchedItem.Title && leesLijstFetchedItem.Author && leesLijstFetchedItem.Link && leesLijstFetchedItem.ID) {
-            // Create a new div with class 'one_tooltip_article'
+            // maak een div aan voor een nieuw artikel in de tooltip
             let tooltipArticle = document.createElement('div');
             tooltipArticle.classList.add('one_tooltip_article');
 
-            // Create the anchor tag <a> and set the href to the article's link
+            // maak een a tag en zet de href gelijk aan de link van het artikel
             let Articlelink = document.createElement('a');
             Articlelink.href = leesLijstFetchedItem.Link;
 
-            // Create the h4 element for the title and set its text
+            // maak h4 aan en zet de auteur erop
             let h4 = document.createElement('h4');
-            h4.textContent = leesLijstFetchedItem.Title;
+            h4.textContent = leesLijstFetchedItem.Author;
 
-            // Create the p element for the description and set its text
+            // maak een p aan en zet de titel erop
             let p = document.createElement('p');
             p.textContent = leesLijstFetchedItem.Title; // You can use a different property if needed for description
 
-            // Create the svg for the right chevron icon
+            // Maak svg aan voor de pijltjes
             let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             svg.classList.add('chev_right');
             svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -87,26 +81,26 @@ function readLocalStorage() {
             path.setAttribute('d', 'M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z');
             svg.appendChild(path);
 
-            // Append the h4, p, and svg to the anchor
+            // voeg de h4, p en svg elementen toe aan de a
             Articlelink.appendChild(h4);
             Articlelink.appendChild(p);
             Articlelink.appendChild(svg);
 
-            // Append the anchor to the div
+            // voeg de a toe aan de article
             tooltipArticle.appendChild(Articlelink);
-            let clonedTooltipArticle = tooltipArticle.cloneNode(true);
-            // Insert the new article before the tooltip_btn
+
+            // voeg het artikel voor de button toe in de tooltip
             tooltipContainer.insertBefore(tooltipArticle, tooltipBtn);
             leeslijstPage.appendChild(clonedTooltipArticle);
         }
     });
 
-    // Update the counter element(s)
+    // In de header wordt de count geupdated
     let counterHeaders = document.querySelectorAll('.counter'); // Select all elements with the class 'counter'
     counterHeaders.forEach(counterHeader => {
         counterHeader.dataset.count = leeslijstCount; // Update the data-count attribute
     });
 }
 
-// Call the function to read and display the leeslijst
+// De masterfunctie :)
 readLocalStorage();
