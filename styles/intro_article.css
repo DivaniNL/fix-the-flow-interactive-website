@@ -1,0 +1,151 @@
+section#intro_article{
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: minmax(1.33rem, 1fr) minmax(0, 1520px) minmax(1.33em, 1fr);
+    
+    .grid_receiver{
+        grid-column: 2/2;
+        @media (min-width: 860px){
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        aside{
+            .excerpt{
+                font-weight: 300;
+                margin: 1em 0;
+                font-size: 15px;
+                line-height: 1.44em;
+                @media (min-width: 860px){
+                    font-size: 21px;
+                }
+            }
+
+            cite{
+                letter-spacing: 1px;
+                font-style: normal;
+                @media (min-width: 860px){
+                    float: left;
+                }
+            }
+
+            .readingtime{
+                color: var(--grey-text);
+                letter-spacing: 1px;
+                margin-top: 6px;
+                @media (min-width: 860px){
+                    margin-top: 0;
+                    float: right;
+                }
+            }
+        
+            .taxonomy{
+                line-height: 2.2em;
+                font-weight: bold;
+                letter-spacing: 8%;
+                color: var(--red);
+                text-transform: uppercase;
+                margin-bottom: 16px;
+                @media (min-width: 860px){
+                    letter-spacing: 0.08em;
+                    font-size: 1rem;
+                    margin-top: 1rem;
+                }
+            }
+            h1{
+                @media (min-width: 1200px){
+                    font-size: 4em;
+                }
+            }
+
+            @media (min-width: 860px){
+                width: calc(658/1520 * 100%);
+                padding-right: 4em;
+            }
+            
+        }
+        
+
+        figure{
+            margin-top: 4em;
+            @media (min-width: 860px){
+                margin-top: 0;
+                display: grid;
+            }
+
+            >img{
+                width: 100%;
+                @media (min-width: 860px){
+                    object-fit: cover;
+                    max-height: 500px;
+                }
+            }
+
+            >figcaption{
+                line-height: 1.4em;
+                font-size: 10px;
+                letter-spacing: 1px;            
+                text-transform: uppercase;
+                padding-top: 12px;
+                span{
+                    display: none;
+                    @media (min-width: 860px){
+                        display: block;
+                        margin: 0 0.5em 0 0;
+                    }
+                }
+
+                @media (min-width: 860px){
+                    grid-row: 1/1;
+                    display: flex;
+                }
+
+                .meta{
+                    @media (min-width: 860px){
+                        display: flex;
+                        gap: 0.5em;
+                    }
+                }
+            }
+
+            @media (min-width: 860px){
+                width: calc(862/1520 * 100%);
+            }
+        } 
+    }
+
+    >.shape_green{
+        position: absolute;
+        top: -1px;
+        width: calc(100% + 2px);
+        left: -1px;
+        height: 100%;
+        z-index: -2;
+
+        .filter-effect {
+            filter: url(#filter0_d_42_1068);
+            @media (min-width: 860px){
+                filter: none;
+            }
+        }
+
+        path{
+            @media (min-width: 860px){
+                stroke: transparent;
+            }
+        }
+    }
+
+    @media (min-width: 860px){
+        padding: 2em 0 5em 0;
+    }
+
+    @media (min-width: 1200px){
+        padding: 10em 0 5em;
+    }
+}

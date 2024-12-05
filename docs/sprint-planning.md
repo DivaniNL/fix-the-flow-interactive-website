@@ -1,57 +1,21 @@
-# Fix the Flow - Interactive Website
+# The Client - Website
 
 ## Sprint planning
 
-Je begint een project altijd met een Sprint Planning, dan weet je wat je de komende weken gaat doen en wat er van je wordt verwacht.
+De Sprint planning vindt plaats aan het begin van elke sprint. 
+Je begint een project altijd met een Sprint planning, dan weet je wat de planning is, wat we de komende weken gaan doen en wat er van je wordt verwacht.
+Het doel van een Sprint planning is om te bepalen wat er de komende sprint aan werk opgepakt kan worden.
+
+Bij FDND werk je 4 sprints aan een opdracht van een opdrachtgever. 
+In de Sprint planning van Sprint 2 ga je kennismaken met de opdrachtgever en krijg je uitleg over de opdracht.. 
+
 
 ## Aanpak
 
-Deze sprint ga je verder met de opdracht. Je gaat de feedback verwerken die je hebt gekregen tijdens de Sprint Review, en je gaat een interactie leren ontwerpen, bouwen, testen en presenteren aan de opdrachtgever. 
-
-
-## Planning maken
-
-Teken een schema op het whiteboard voor de komende 3 weken.
-Bekijk het programma van Sprint 5 en neem de belangrijke momenten en opdrachten uit het programma op in het schema.
-
-De Sprint Review in Sprint 5 is de laatste keer dit semester dat je de opdrachtgever spreekt. 
-Kan je al bedenken wat je dan wil laten zien? 
-Belangrijke momenten zijn ook de code/design reviews op vrijdag; wat wil je dan af hebben? 
-
-Neem ook de deeltaken "UI Events" en "JS Fundamentals" op het programma door. Bedenk wanneer je hier aan gaat werken en voeg deze toe aan het schema.
-
-### Repo forken en klaarzetten
-
-Fork en Clone deze leertaak. 
-Zet je issues in je nieuwe repo aan en voeg de relevante issues uit de vorige sprint toe aan je nieuwe repo.
-
-Elke sprint schrijf je nieuwe code, ook al blijven onderdelen van de website hetzelfde. 
-Zo leer je beter coderen en nettere code schrijven. 
-
-
-### Projectboard
-
-Koppel het project board uit de vorige sprint aan de repository van Sprint 5, en voeg de planning van het schema toe.
-
-Als je het project board op *Roadmap* zet, krijg je een overzicht met je taken en een tijdplanning. Naast _assignees_, waar we vorige sprint mee begonnen zijn, kun je taken en issues ook een _tijdspad_ geven.
-
-![](ghprojects-example-roadmap.webp)
-*De Roadmap-view van Github projects geeft een overzicht van taken en tijdsplanning.*
-
-#### Bronnen
-[Changing the layout of a view - Github docs](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view)
-[About date fields](https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields/about-date-fields)
-
-<!-- 
-Voor deze opdracht kies je een User Story waarin een gebruiker iets moet doen, zoals het toevoegen van informatie aan een agenda of stap voor stap door een vragenlijst klikken, een chat-formulier of bijvoorbeeld een filter systeem.  
-
-> Waar kan de klant het meeste feedback op hebben? Waar zijn de grootste risico's en zal er waarschijnlijk het meeste werk in kruipen? - Emiel Van Betsbrugge, Active Theory
-
-Sprint plannen aan de hand van het programma:
-JS fundamentals
-Deeltaak UI events
-I Love Web
-CSS challenges en JS challenges
-Code design reviews, wat vrijdag afhebben?
-
--->
+1. Bekijk het programma van sprint 2 op [programma.fdnd.nl](https://programma.fdnd.nl/)
+2. Fork deze leertaak en post de url van je repo in het Teams kanaal _#Sprint 02 - The Client_.
+3. Maak een nieuw _Project Board_ aan op Github. Neem de belangrijke momenten en opdrachten uit het programma op in je _Project Board_, zoals de code/design reviews, de opdrachten die op het programma staan en de sprint review.
+4. Nu ga je een project kiezen: Lees de projecten op https://github.com/fdnd-agency en kies een van de projecten door je naam op het whiteboard te zetten. Maximaal 4 studenten per squad. Niet dezelfde studenten als het team van de squadpage.
+5. Bereid met studenten uit je squad die dezelfde opdrachtgever hebben de briefing voor. Volg hiervoor de instructies van de workshop briefing/debriefing.
+6. Na de briefing van de opdrachtgever werk eerst je eigen debriefing volledig uit. Maak daarna 1 debriefing met de studenten uit je squad en stuur het op naar de opdrachtgever.
+7. Nu je weet wat (ongeveer) de bedoeling is kan je beginnen met je eerste ideeën schetsen en uitwerken ... 
