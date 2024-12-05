@@ -319,6 +319,11 @@ body{
                         margin-right: 2em;
                     }
                     justify-content: flex-end;
+                    .link_leeslijst{
+                        .tooltip_leeslijst{
+                            display: none;
+                        }
+                    }
                 }
             }
             @media (min-width :860px){
