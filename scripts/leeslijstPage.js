@@ -88,6 +88,8 @@ function readLocalStorage() {
 
             // voeg de a toe aan de article
             tooltipArticle.appendChild(Articlelink);
+            //clone de artikel zodat hij ook aan de leeslijst aside toegevoegd kan worden
+            let clonedTooltipArticle = tooltipArticle.cloneNode(true);
 
             // voeg het artikel voor de button toe in de tooltip
             tooltipContainer.insertBefore(tooltipArticle, tooltipBtn);
