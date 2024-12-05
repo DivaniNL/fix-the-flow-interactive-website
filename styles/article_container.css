@@ -30,12 +30,14 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                border-radius: 2px;
                 &:hover, &:focus{
                     background-color: var(--black) !important;
                     color: var(--white) !important;
                     svg, svg>*{
                         color: var(--white);
                         fill: var(--white);
+                        stroke: transparent;
                     }
                 }
             }
@@ -46,9 +48,25 @@
                 .utility_btn{
                     background-color: var(--light-border);
                     color: var(--grey-text);
-                    width: 3rem;
-                    height: 3rem;
                     justify-content: center;
+                    &:not(.bookmark){
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                    &.bookmark{
+                        gap: 8px;
+                        padding: 4px 8px;
+                        &.article_added{
+                            background-color: var(--red) !important;
+                            color: var(--white) !important;
+                            svg, svg>*{
+                                color: var(--white);
+                                fill: var(--white);
+                                stroke: transparent;
+                            }
+                        }
+                        
+                    }
                 }
             }
 
