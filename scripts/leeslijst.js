@@ -150,7 +150,7 @@ function readLocalStorage() {
 
             // Create the h4 element for the title and set its text
             let h4 = document.createElement('h4');
-            h4.textContent = leesLijstFetchedItem.Title;
+            h4.textContent = leesLijstFetchedItem.Author;
 
             // Create the p element for the description and set its text
             let p = document.createElement('p');

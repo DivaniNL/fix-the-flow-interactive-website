@@ -1,17 +1,81 @@
 body#leesLijst {
     .grid_giver {
         grid-template-columns: minmax(1.33rem, 1fr) minmax(0, 818px) minmax(1.33em, 1fr); /* reduce content of contact form to 818px instead of 1520px */
+        .shape_green{
+            bottom: calc(100% - 235px);
+            top: unset;
+            display: block !important;
+            @media (min-width: 860px){
+             bottom: calc(100% - 335px);
+            }
+            &.success{
+              bottom: unset;
+              top: 0;
+            }
+        }
+        .grid_receiver{
+            .leesLijst{
+                margin-top: 60px;
+                border-radius: 2px;
+                border: 1px solid var(--black);
+                background-color: #E1E1E1;
+                padding: 73px 93px;
+                .one_tooltip_article{
+                    padding: 8px 0 12px 0;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid var(--black);
+                    }
+                    &:first-child{
+                        padding-top: 0;
+                    }
+                    &:last-of-type{
+                        padding-bottom: 30px;
+                    }
+                    a{
+                        color: var(--black);
+                        position: relative;
+                        > *{
+                            transition: color 0.1s ease;
+                        }
+                        h4, p{
+                            font-size: 20px;
+                            font-family: 'Tiempos Text';
+                        }
+                        h4{
+                            text-transform: uppercase;
+                            margin-bottom: 4px;
+                            letter-spacing: 2px;
+                        }
+                        p{
+                            line-height: 125%;
+                            letter-spacing: 0.5px;
+                        }  
+                        &:hover, &:focus > *{
+                            color: var(--red);
+                            > * {
+                                fill: var(--red);
+                            }
+                        }
+                        .chev_right{
+                            width: 9px;
+                            height: 16px;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            translate: 0 -50%;
+                            fill: var(--black);
+                            stroke: var(--black);
+                            > *{
+                                fill: var(--black);
+                                stroke: var(--black);
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
     }
-    .shape_green{
-        bottom: calc(100% - 235px);
-        top: unset;
-        display: block !important;
-        @media (min-width: 860px){
-         bottom: calc(100% - 335px);
-        }
-        &.success{
-          bottom: unset;
-          top: 0;
-        }
-       }
+    
 }
