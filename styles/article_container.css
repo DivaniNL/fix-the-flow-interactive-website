@@ -32,7 +32,7 @@
                 align-items: center;
                 border-radius: 2px;
                 &:hover, &:focus{
-                    background-color: var(--black) !important;
+                    background-position: top !important;
                     color: var(--white) !important;
                     svg, svg>*{
                         color: var(--white);
@@ -46,7 +46,10 @@
                 column-gap: 1rem;
 
                 .utility_btn{
-                    background-color: var(--light-border);
+                    background-position: bottom;
+                    background-image: linear-gradient(var(--black) 50%, var(--light-border) 50%);
+                    background-size: 100% 200%;
+                    transition: 0.3s ease;
                     color: var(--grey-text);
                     justify-content: center;
                     &:not(.bookmark){
@@ -57,13 +60,23 @@
                         gap: 8px;
                         padding: 4px 8px;
                         &.article_added{
-                            background-color: var(--red) !important;
+                            background-image: linear-gradient(var(--black) 50%, var(--red) 50%);
                             color: var(--white) !important;
                             svg, svg>*{
                                 color: var(--white);
                                 fill: var(--white);
                                 stroke: transparent;
                             }
+                            &:hover, &:focus{
+                                background-position: top;
+                                color: var(--white) !important;
+                                svg, svg>*{
+                                    color: var(--white);
+                                    fill: var(--white);
+                                    stroke: transparent;
+                                }
+                            }
+                            
                         }
                         
                     }
@@ -78,7 +91,10 @@
                         display: none;
                     }
                 }
-                background-color: var(--light-red);
+                background-image: linear-gradient(var(--black) 50%, var(--light-red) 50%);
+                background-size: 100% 200%;
+                background-position: bottom;
+                transition: 0.3s ease;
                 color: var(--brownred);
                 svg, svg>*{
                     color: var(--brownred);

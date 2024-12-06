@@ -320,7 +320,7 @@ body{
                         top: 0;
                         justify-content: flex-start;
                         padding-bottom: 30px;
-                        border-bottom: 1px solid var(--light-border)e1;
+                        border-bottom: 1px solid var(--light-border);
                         li{
                             a{
                                 line-height: 2.5em;
