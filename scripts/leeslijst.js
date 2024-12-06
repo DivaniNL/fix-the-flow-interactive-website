@@ -43,12 +43,13 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
         
         // verander tekst in button
         if (leesLijstBtn.classList.contains('article_added')) {
+            leesLijstBtn.setAttribute('disabled', true);  // I hate spammers  grr die stomme button spammers toch ook
             textPart.innerHTML = 'Toegevoegd';
             setTimeout(function (){ // Toon dit bericht na 1 seconde
-  
                 textPart.innerHTML = 'Verwijder uit leeslijst';
-                          
+                leesLijstBtn.removeAttribute('disabled'); // I hate spammers      
             }, 2000);
+    
         } else {
             textPart.innerHTML = 'Voeg toe aan leeslijst';
         }
