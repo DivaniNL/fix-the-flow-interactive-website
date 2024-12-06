@@ -26,6 +26,11 @@ function updateButtonState() {
     });
 }
 
+// Als je op desktop op de leeslijst item in de navigatie klikt, wordt het standard event genegeerd (preventdefault)
+// Hierna wordt een class gegeven aan de leeslijst tooltip waardoor deze zichtbaar wordt.
+let leesLijstNavItemLink = document.querySelector(".link_leeslijst.mobile_hidden");
+let leesLijstTooltip = document.querySelector(".tooltip_leeslijst")
+
 // Update buttons na het laden van de pagina.
 updateButtonState();
 
@@ -74,9 +79,35 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
         if (existingItemIndex === -1) {
             // Zo niet voeg hem toe ana de leeslijst array
             leesLijst.push(leesLijstItem);
+            let counterHeaders = document.querySelectorAll('.counter'); // Select all elements with the class 'counter'
+            counterHeaders.forEach(counterHeader => {
+                counterHeader.classList.add('added');
+                setTimeout(function (){ // Doe dit na 1s
+    
+                    counterHeader.classList.remove('added');
+                        
+                }, 500);
+            });
+            leesLijstTooltip.classList.add('slide-out');
+            setTimeout(function (){ // Doe dit na 1s
+    
+                leesLijstTooltip.classList.remove('slide-out');
+                    
+            }, 2000);
+            
         } else {
             // Als dit item al in de local storage staat, verwijder hem dan
             leesLijst.splice(existingItemIndex, 1);
+            let counterHeaders = document.querySelectorAll('.counter'); // Select all elements with the class 'counter'
+            counterHeaders.forEach(counterHeader => {
+                counterHeader.classList.add('remove');
+                setTimeout(function (){ // Doe dit na 1s
+    
+                    counterHeader.classList.remove('remove');
+                        
+                }, 500);
+            });
+            
         }
         // zet de geupdatete array terug in localstorage
         localStorage.setItem('leeslijst', JSON.stringify(leesLijst));
@@ -85,10 +116,6 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
         console.log(localStorage.getItem('leeslijst')); // Log de leeslisjt
     });
 });
-// Als je op desktop op de leeslijst item in de navigatie klikt, wordt het standard event genegeerd (preventdefault)
-// Hierna wordt een class gegeven aan de leeslijst tooltip waardoor deze zichtbaar wordt.
-let leesLijstNavItemLink = document.querySelector(".link_leeslijst.mobile_hidden");
-let leesLijstTooltip = document.querySelector(".tooltip_leeslijst")
 
 leesLijstNavItemLink.addEventListener('click', function(e){
     if (mediaQuery.matches) {
@@ -177,7 +204,9 @@ function readLocalStorage() {
     // In de header wordt de count geupdated
     let counterHeaders = document.querySelectorAll('.counter'); // Select all elements with the class 'counter'
     counterHeaders.forEach(counterHeader => {
-        counterHeader.dataset.count = leeslijstCount; // Update the data-count attribute
+    counterHeader.dataset.count = leeslijstCount; // Update the data-count attribute
+        
+        
     });
 }
 

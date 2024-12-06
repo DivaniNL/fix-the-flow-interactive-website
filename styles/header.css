@@ -254,6 +254,12 @@ body{
                                         &[count="0"]{
                                             display: none;
                                         }
+                                        &.added{
+                                            background-color: rebeccapurple;
+                                            animation-name:updated;
+                                            animation-duration:.2s;
+                                            animation-iteration-count:2;
+                                        }
                                     }
                                     
                                     .counter::before {
@@ -368,6 +374,17 @@ body{
                             &[data-count="0"]{
                                 display: none;
                             }
+                            &.remove, &.added{
+                                animation-name:updated;
+                                animation-duration:.5s;
+                                animation-iteration-count:1;
+                            }
+                            &.remove{
+                                background-color: var(--brownred);
+                            }
+                            &.added{
+                                background-color: #81A548;
+                            }
                         }
                         .counter::before {
                             content: attr(data-count);
@@ -381,7 +398,7 @@ body{
                     li:has(.link_leeslijst) {
                         position: relative;
                         .tooltip_leeslijst{
-                            display: none;
+                            opacity: 0;
                             position: absolute;
                             left: 50%;
                             top: calc(100% + 37px);
@@ -393,6 +410,10 @@ body{
                             width: 230px;
                             border: 2px solid;
                             border-radius: 2px;
+                            transition: 0.3s ease-in;
+                            &.slide-out{
+                                opacity: 1;
+                            }
                             .one_tooltip_article{
                                 padding: 8px 0 12px 0;
                                 &:not(:last-of-type){
