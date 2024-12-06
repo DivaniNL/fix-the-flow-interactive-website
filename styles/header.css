@@ -399,6 +399,7 @@ body{
                         position: relative;
                         .tooltip_leeslijst{
                             opacity: 0;
+                            display: none;
                             position: absolute;
                             left: 50%;
                             top: calc(100% + 37px);
@@ -413,6 +414,7 @@ body{
                             transition: 0.3s ease-in;
                             &.slide-out{
                                 opacity: 1;
+                                display: block;
                             }
                             .one_tooltip_article{
                                 padding: 8px 0 12px 0;
@@ -524,6 +526,7 @@ body{
                             }
                             &.active_tooltip{
                                 display: block;
+                                opacity: 1;
                             }
                         }
                     }
