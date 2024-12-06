@@ -18,7 +18,7 @@ function updateButtonState() {
         // Pas class en tekst aan aan de hand van de status.
         if (itemInLeesLijst) {
             leesLijstBtn.classList.add('article_added');
-            textPart.innerHTML = 'Toegevoegd';
+            textPart.innerHTML = 'Verwijder uit leeslijst';
         } else {
             leesLijstBtn.classList.remove('article_added');
             textPart.innerHTML = 'Voeg toe aan leeslijst';
@@ -39,6 +39,11 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
         // verander tekst in button
         if (leesLijstBtn.classList.contains('article_added')) {
             textPart.innerHTML = 'Toegevoegd';
+            setTimeout(function (){ // Toon dit bericht na 1 seconde
+  
+                textPart.innerHTML = 'Verwijder uit leeslijst';
+                          
+            }, 1000);
         } else {
             textPart.innerHTML = 'Voeg toe aan leeslijst';
         }
