@@ -145,11 +145,11 @@ function readLocalStorage() {
 
             // maak h4 aan en zet de auteur erop
             let h4 = document.createElement('h4');
-            h4.textContent = leesLijstFetchedItem.Author;
+            h4.textContent = leesLijstFetchedItem.Title;
 
             // maak een p aan en zet de titel erop
             let p = document.createElement('p');
-            p.textContent = leesLijstFetchedItem.Title; // You can use a different property if needed for description
+            p.textContent = leesLijstFetchedItem.Author; // You can use a different property if needed for description
 
             // Maak svg aan voor de pijltjes
             let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
