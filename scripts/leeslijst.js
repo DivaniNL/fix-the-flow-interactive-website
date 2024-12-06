@@ -43,7 +43,7 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
   
                 textPart.innerHTML = 'Verwijder uit leeslijst';
                           
-            }, 1000);
+            }, 2000);
         } else {
             textPart.innerHTML = 'Voeg toe aan leeslijst';
         }
