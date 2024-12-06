@@ -1,8 +1,5 @@
+// Met de mediaquery wordt ervoor gezorgd dat alleen op desktop de leeslijst tooltip functie wordt uitgevoerd.
 const mediaQuery = window.matchMedia('(min-width: 860px)');
-
-// In de header wordt de count geupdated
-// Als er nog geen counter bolletje is, voeg de class toe aan dit menu item.
-//////////////////////
 
 // Als je op desktop op de leeslijst item in de navigatie klikt, wordt het standard event genegeerd (preventdefault)
 // Hierna wordt een class gegeven aan de leeslijst tooltip waardoor deze zichtbaar wordt.

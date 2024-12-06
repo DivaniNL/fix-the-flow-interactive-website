@@ -1,4 +1,6 @@
+// Met de mediaquery wordt ervoor gezorgd dat alleen op desktop de leeslijst tooltip functie wordt uitgevoerd.
 const mediaQuery = window.matchMedia('(min-width: 860px)');
+
 // Als je op de leeslijst button klikt, krijgt deze een andere kleur.
 // Als dit item al in de leeslijst zit, maak de kleur dan weer normaal
 let leesLijstBtns = document.querySelectorAll('.utility_btn.bookmark'); // Select all buttons
