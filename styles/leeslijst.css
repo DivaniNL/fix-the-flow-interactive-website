@@ -20,6 +20,30 @@ body#leesLijst {
                 border: 1px solid var(--black);
                 background-color: #E1E1E1;
                 padding: 73px 93px;
+                h2{
+                    text-transform: uppercase;
+                    margin-bottom: 4px;
+                    letter-spacing: 2px;
+                    font-family: 'Tiempos Text';
+                    font-size: 38px;
+                    text-align: center;
+                }
+                >h4{
+                    text-align: center;
+                }
+                h4, p{
+                    font-size: 20px;
+                    font-family: 'Tiempos Text';
+                }
+                h4{
+                    text-transform: uppercase;
+                    margin-bottom: 4px;
+                    letter-spacing: 2px;
+                }
+                p{
+                    line-height: 125%;
+                    letter-spacing: 0.5px;
+                }  
                 .one_tooltip_article{
                     padding: 8px 0 12px 0;
                     display: flex;
@@ -39,21 +63,11 @@ body#leesLijst {
                         > *{
                             transition: color 0.1s ease;
                         }
-                        h4, p{
-                            font-size: 20px;
-                            font-family: 'Tiempos Text';
+                        &:hover{
+                            color: var(--red);
                         }
-                        h4{
-                            text-transform: uppercase;
-                            margin-bottom: 4px;
-                            letter-spacing: 2px;
-                        }
-                        p{
-                            line-height: 125%;
-                            letter-spacing: 0.5px;
-                        }  
                         
-                        
+                      
                     }
                     .trash{
                         width: 24px;
@@ -62,12 +76,19 @@ body#leesLijst {
                         left: 100%;
                         top: 50%;
                         translate: 0 -50%;
-                        fill: var(--black);
-                        stroke: var(--black);
+                        cursor: pointer
                         pointer-events: all; /* Ensure the SVG can be clicked */
                         > *{
                             fill: var(--black);
                             stroke: var(--black);
+                            transition: 0.2s ease;
+                        }
+                        &:hover{
+
+                            > *{
+                                fill: var(--red);
+                                stroke: var(--red);
+                            }
                         }
 
                     }
