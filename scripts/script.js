@@ -216,5 +216,25 @@ window.addEventListener('scroll', handleScroll);
 // Attach the resize event listener to handle changes in viewport
 window.addEventListener('resize', handleScroll);
 
+
+const sharePage1 = {
+    title: "Red Pers",
+    text: "Verbindend, fris en vol energie: een duik in de opkomst van maté",
+    url: "https://divaninl.github.io/fix-the-flow-interactive-website/index.html",
+  };
+  
+  const shareBtn = document.querySelector(".shareBtn");
+  const resultPara = document.querySelector(".result");
+  
+  // Share must be triggered by "user activation"
+  shareBtn.addEventListener("click", async () => {
+    try {
+      await navigator.share(sharePage1);
+      resultPara.textContent = "Arikel sucessvol gedeeld";
+    } catch (err) {
+      resultPara.textContent = `Oeps! Er is iets fout gegaan: ${err}`;
+    }
+  });
+
 // Initial call to handle display on page load
 handleScroll();

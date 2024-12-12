@@ -11,6 +11,10 @@
             gap: 1rem;
             justify-content: space-between;
             margin-bottom: 1rem;
+            .result{
+                width: 100%;
+                text-align: right;
+            }
             &:not(.doneReading){
                 position: sticky;
                 top: 85px;
