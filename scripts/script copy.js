@@ -43,15 +43,6 @@ function showPopUp(popupname) {
 
 }
 
-// Function to show the popup
-function showPopUp(popupName) {
-    const selectedPopUp = document.querySelector(`[data-popup='${popupName}']`);
-    if (selectedPopUp) {
-        selectedPopUp.style.display = 'block'; // Show the popup
-    }
-    document.body.classList.add('has-popup'); // Optionally add a class to the body
-}
-
 const ScrollActions = () => {
     const pos = document.documentElement.scrollTop;
     const calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -73,8 +64,6 @@ const ScrollActions = () => {
         article_btns.classList.remove('doneReading');
     }
 }
-window.onscroll = ScrollActions;
-
 
 // Function to close all popups
 function closeAllPopups() {
@@ -167,10 +156,8 @@ popup.addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent the click event from bubbling up to the document
 });
 
-
-
-
 // Scroll actions listener
+window.onscroll = ScrollActions;
 
 // HIDE TAGLINE AFTER SCROLL MOBILE
 // Select the elements
@@ -185,7 +172,7 @@ let isTopNavHidden = false;
 let lastScrollY = 0; // Track the last scroll position
 
 // Function to handle show/hide logic
-function checkVisibility() {
+function handleScroll() {
     const currentScrollY = window.scrollY;
     if (window.innerWidth < 860) { // Mobile view
         if (currentScrollY > 100 && !isTaglineHidden) {
@@ -217,9 +204,9 @@ function checkVisibility() {
 }
 
 // Attach the scroll event listener
-setInterval(checkVisibility, 100);
+window.addEventListener('scroll', handleScroll);
 // Attach the resize event listener to handle changes in viewport
-window.addEventListener('resize', checkVisibility);
+window.addEventListener('resize', handleScroll);
 
 // Initial call to handle display on page load
-checkVisibility();
+handleScroll();
