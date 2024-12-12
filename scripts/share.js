@@ -1,9 +1,20 @@
 // De data - Bron: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share
+
+const metaDescription = document.querySelector('meta[name="description"]').getAttribute('content');
+
+
+if (metaDescription) {
+ shareTxt = metaDescription;
+} else {
+ shareTxt = "Gedeeld artikel";
+}
+
 const sharePage = {
- title: "Red Pers",
- text: "Verbindend, fris en vol energie: een duik in de opkomst van maté",
- url: "https://divaninl.github.io/fix-the-flow-interactive-website/index.html",
+ title: document.title,
+ text: shareTxt,
+ url: document.location,
 };
+console.log(sharePage);
 // De button en result dif defineren
 const shareBtn = document.querySelector(".shareBtn");
 const resultPara = document.querySelector(".result");
