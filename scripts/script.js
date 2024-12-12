@@ -107,13 +107,6 @@ document.querySelectorAll('.openNewsletterPopupButton').forEach(button => {
     });
 });
 
-// Allow reopening the search popup on button click
-document.querySelectorAll('.openSearchPopupButton').forEach(button => {
-    button.addEventListener('click', () => {
-        showPopUp("search_popup"); // Open the popup
-    });
-});
-
 // Select the element with the specified classes and add a click event listener
 document.querySelector('.utility_btn.textsize').addEventListener("click", function() {
     if (Textsizeison === 0) {
@@ -152,8 +145,7 @@ document.addEventListener('click', function(event) {
     if (activePopup) {
         // Check if the click target is outside the popup and not one of the buttons that opens the popup
         if (!activePopup.contains(event.target) && 
-            !event.target.closest('.openNewsletterPopupButton') && 
-            !event.target.closest('.openSearchPopupButton')) {
+            !event.target.closest('.openNewsletterPopupButton')) {
             closeAllPopups(); // Hide the popup if the click is outside of it
         }
     }

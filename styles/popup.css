@@ -1,7 +1,7 @@
-.popup{
-    display: none;
+.popup, div[popover]{
+    overflow: unset;
     width: 500px;
-    height: auto;
+    height: fit-content;
     padding: 50px;
     max-width: calc(100% - 70px);
     max-height: 100%;
@@ -54,7 +54,7 @@
             }
         }
     }
-    &#search_popup{
+    &#search-popover{
         form{
             display: flex;
             border: 1px solid var(--black);
@@ -101,4 +101,7 @@
             }
         }
     }
+}
+.popup{
+    display: none;
 }

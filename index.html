@@ -46,7 +46,7 @@
             <a href="#home" class="logo" tabindex="2">
                 <img src="./assets/RedPers_Logo.webp" alt="Logo van Red Pers">
             </a>
-            <button class="search-icon openSearchPopupButton" tabindex="4" aria-label="Search">Zoeken
+            <button class="search-icon" popovertarget="search-popover" tabindex="4" aria-label="Search">Zoeken
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
                     <path d="M29.7576 29.7C29.4645 29.9931 28.9892 29.9931 28.6961 29.7L19.8345 20.8385C19.0845 21.4769 18.222 21.9712 17.247 22.3212C16.272 22.6712 15.2922 22.8462 14.3076 22.8462C11.9051 22.8462 9.87178 22.0146 8.20765 20.3513C6.5435 18.6881 5.71143 16.6559 5.71143 14.2547C5.71143 11.8535 6.54304 9.81971 8.20626 8.15336C9.86949 6.48701 11.9017 5.65384 14.3029 5.65384C16.7041 5.65384 18.7379 6.4859 20.4042 8.15003C22.0706 9.81415 22.9037 11.8475 22.9037 14.25C22.9037 15.2923 22.7191 16.301 22.3499 17.276C21.9807 18.251 21.4961 19.0846 20.8961 19.7769L29.7576 28.6385C30.0508 28.9316 30.0508 29.4069 29.7576 29.7ZM14.3076 21.3462C16.298 21.3462 17.9783 20.6611 19.3484 19.2909C20.7186 17.9207 21.4037 16.2404 21.4037 14.25C21.4037 12.2596 20.7186 10.5793 19.3484 9.20914C17.9783 7.83894 16.298 7.15384 14.3076 7.15384C12.3172 7.15384 10.6369 7.83894 9.26673 9.20914C7.89655 10.5793 7.21146 12.2596 7.21146 14.25C7.21146 16.2404 7.89655 17.9207 9.26673 19.2909C10.6369 20.6611 12.3172 21.3462 14.3076 21.3462Z" fill="black" />
                 </svg>
@@ -77,21 +77,6 @@
                                 <path d="M1 1L15 15" stroke="black" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </button>
-
-                        <div class="one_tooltip_article">
-                            <a href="./index.html">
-                                <h4>Madelief Wapenaar</h4>
-                                <p>Verbindend, fris en vol energie: een duik in de opkomst van maté</p>
-                                <svg class="chev_right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
-                            </a>
-                        </div>
-                        <div class="one_tooltip_article">
-                            <a href="./stagiair.html">
-                                <h4>Anna van Poucke</h4>
-                                <p>Als stagiair voor de klas: onbetaald en onder hoge druk</p>
-                                <svg class="chev_right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
-                            </a>
-                        </div>
                         <a class="tooltip_btn" href="./leeslijst.html">Bekijk Leeslijst</a>
                     </div>
                     </li>
@@ -556,7 +541,7 @@
                     </div>
                 </div>
             </article>
-            <div class="popup" id="search_popup" data-popup="search_popup">
+            <div popover id="search-popover" data-popup="search_popup">
                 <h2>Zoeken</h2>
                 <form action="/search" method="GET">
                     <input type="text" name="q" placeholder="Search...">
@@ -567,7 +552,7 @@
                         </svg>
                     </button>
                 </form>
-                <button class="closePopUp"></button>
+                <button class="closePopUp" popovertarget="search-popover" popoveraction="hide" aria-label="Close"></button>
             </div>
             <div class="popup" id="nieuwsbrief_popup" data-popup="nieuwsbrief_popup">
                 <h2>Nieuwsbrief</h2>
