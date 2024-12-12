@@ -118,6 +118,15 @@ document.querySelectorAll('.openNewsletterPopupButton').forEach(button => {
     });
 });
 
+// Allow reopening the search
+document.querySelectorAll('.search-icon').forEach(button => {
+    button.addEventListener('click', () => {
+        document.body.classList.add('has-popup'); // Optionally add a class to the body
+    });
+});
+
+
+
 // Select the element with the specified classes and add a click event listener
 document.querySelector('.utility_btn.textsize').addEventListener("click", function() {
     if (Textsizeison === 0) {

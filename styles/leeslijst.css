@@ -22,6 +22,8 @@ body#leesLijst {
                 padding: 73px 93px;
                 .one_tooltip_article{
                     padding: 8px 0 12px 0;
+                    display: flex;
+                    position: relative;
                     &:not(:last-of-type){
                         border-bottom: 1px solid var(--black);
                     }
@@ -50,27 +52,24 @@ body#leesLijst {
                             line-height: 125%;
                             letter-spacing: 0.5px;
                         }  
-                        &:hover, &:focus > *{
-                            color: var(--red);
-                            > * {
-                                fill: var(--red);
-                            }
-                        }
-                        .chev_right{
-                            width: 9px;
-                            height: 16px;
-                            position: absolute;
-                            right: 0;
-                            top: 50%;
-                            translate: 0 -50%;
+                        
+                        
+                    }
+                    .trash{
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        left: 100%;
+                        top: 50%;
+                        translate: 0 -50%;
+                        fill: var(--black);
+                        stroke: var(--black);
+                        pointer-events: all; /* Ensure the SVG can be clicked */
+                        > *{
                             fill: var(--black);
                             stroke: var(--black);
-                            > *{
-                                fill: var(--black);
-                                stroke: var(--black);
-                            }
-
                         }
+
                     }
 
                 }

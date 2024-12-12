@@ -452,26 +452,27 @@ body{
                                         
                                     }
 
-                                    .chev_right{
-                                        width: 9px;
-                                        height: 16px;
-                                        position: absolute;
-                                        right: 0;
-                                        top: 50%;
-                                        translate: 0 -50%;
+                                    
+                                }
+                                .chev_right{
+                                    width: 9px;
+                                    height: 16px;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                    translate: 0 -50%;
+                                    fill: var(--black);
+                                    stroke: var(--black);
+                                    > *{
                                         fill: var(--black);
                                         stroke: var(--black);
-                                        > *{
-                                            fill: var(--black);
-                                            stroke: var(--black);
-                                        }
-
                                     }
-                                    &:hover .chev_right, &:focus .chev_right{
-                                        > *{
-                                            fill: var(--red);
-                                            stroke: var(--red);
-                                        }
+
+                                }
+                                &:hover .chev_right, &:focus .chev_right{
+                                    > *{
+                                        fill: var(--red);
+                                        stroke: var(--red);
                                     }
                                 }
 
