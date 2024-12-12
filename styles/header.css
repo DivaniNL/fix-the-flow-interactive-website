@@ -418,6 +418,7 @@ body{
                             }
                             .one_tooltip_article{
                                 padding: 8px 0 12px 0;
+                                position: relative;
                                 &:not(:last-of-type){
                                     border-bottom: 1px solid var(--black);
                                 }
@@ -429,7 +430,7 @@ body{
                                 }
                                 a{
                                     color: var(--black);
-                                    position: relative;
+                                    
                                     > *{
                                         transition: color 0.1s ease;
                                     }
@@ -446,12 +447,11 @@ body{
                                         letter-spacing: 0.5px;
                                         max-width: 153px;
                                     }  
-                                    &:hover, &:focus > *{
+                                    &:hover > *, &:focus > *{
                                         color: var(--red);
-                                        > * {
-                                            fill: var(--red);
-                                        }
+                                        
                                     }
+
                                     .chev_right{
                                         width: 9px;
                                         height: 16px;
@@ -466,6 +466,12 @@ body{
                                             stroke: var(--black);
                                         }
 
+                                    }
+                                    &:hover .chev_right, &:focus .chev_right{
+                                        > *{
+                                            fill: var(--red);
+                                            stroke: var(--red);
+                                        }
                                     }
                                 }
 

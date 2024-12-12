@@ -9,7 +9,71 @@
 html{
     scroll-behavior: smooth;
 }
-
+@view-transition{
+    navigation: auto;
+}
+main{
+    view-transition-name: main;
+}
+.tooltip_leeslijst{
+    view-transition-name: tooltip;
+}
+/* Create a custom animation */
+@keyframes move-out {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes move-in {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  /* Create a custom animation */
+@keyframes move-out-2 {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes move-in-2 {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* Apply the custom animation to the old and new page states */
+  ::view-transition-old(main) {
+    animation: 1s ease-in both move-out;
+  }
+  
+  ::view-transition-new(main) {
+    animation: 1s ease-in both move-in;
+  }
+  ::view-transition-old(tooltip) {
+    animation: 1s ease-in both move-out-2;
+  }
+  
+  ::view-transition-new(tooltip) {
+    animation: 1s ease-in both move-in-2;
+  }
 /*  Added Tiempos */
 @font-face {
     font-family: 'Tiempos Text';
