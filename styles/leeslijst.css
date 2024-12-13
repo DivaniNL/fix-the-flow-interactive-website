@@ -14,12 +14,8 @@ body#leesLijst {
             }
         }
         .grid_receiver{
-            .leesLijst{
-                margin-top: 60px;
-                border-radius: 2px;
-                border: 1px solid var(--black);
-                background-color: #E1E1E1;
-                padding: 73px 93px;
+            .intro_leeslijst{
+                margin-top: 2em;
                 h2{
                     text-transform: uppercase;
                     margin-bottom: 4px;
@@ -28,21 +24,31 @@ body#leesLijst {
                     font-size: 38px;
                     text-align: center;
                 }
+            }
+            .leesLijst{
+                margin-top: 60px;
+                border-radius: 2px;
+                border: 1px solid var(--black);
+                background-color: #E1E1E1;
+                padding: 73px 93px;
+                
                 >h4{
                     text-align: center;
                 }
                 h4, p{
-                    font-size: 20px;
                     font-family: 'Tiempos Text';
                 }
                 h4{
-                    text-transform: uppercase;
+                    font-weight: bold;
                     margin-bottom: 4px;
                     letter-spacing: 2px;
+                    font-size: 20px;
+                    max-width: 80%;
                 }
                 p{
                     line-height: 125%;
                     letter-spacing: 0.5px;
+                    font-size: 16px;
                 }  
                 .one_tooltip_article{
                     padding: 8px 0 12px 0;
@@ -76,7 +82,7 @@ body#leesLijst {
                         left: 100%;
                         top: 50%;
                         translate: 0 -50%;
-                        cursor: pointer
+                        cursor: pointer;
                         pointer-events: all; /* Ensure the SVG can be clicked */
                         > *{
                             fill: var(--black);
