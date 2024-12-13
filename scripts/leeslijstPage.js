@@ -65,7 +65,11 @@ function readLocalStorage() {
             // maak een div aan voor een nieuw artikel in de tooltip
             let tooltipArticle = document.createElement('div');
             tooltipArticle.classList.add('one_tooltip_article');
-
+            tooltipArticle.classList.add('one_tooltip_article');
+            tooltipArticle.dataset.articleId = leesLijstFetchedItem.ID;
+            tooltipArticle.dataset.articleLink = leesLijstFetchedItem.Link;
+            tooltipArticle.dataset.articleTitle = leesLijstFetchedItem.Title;
+            tooltipArticle.dataset.articleAuthor = leesLijstFetchedItem.Author;
             // maak een a tag en zet de href gelijk aan de link van het artikel
             let Articlelink = document.createElement('a');
             Articlelink.href = leesLijstFetchedItem.Link;
@@ -160,6 +164,8 @@ function readLocalStorage() {
     
                 // Haal het item visueel weg
                 trashButton.parentElement.remove();
+                currentToolTipItem = document.querySelector('.one_tooltip_article[data-article-id="'+currentItemID+'"');
+                currentToolTipItem.remove();
                 leeslijstCount = leesLijst.length 
                 // check of de leeslijst nu leeg is
                 if (leeslijstCount === 0) {

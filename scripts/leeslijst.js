@@ -90,11 +90,6 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
                 }, 500);
             });
             leesLijstTooltip.classList.add('slide-out');
-            setTimeout(function (){ // Doe dit na 1s
-    
-                leesLijstTooltip.classList.remove('slide-out');
-                    
-            }, 2000);
             
         } else {
             // Als dit item al in de local storage staat, verwijder hem dan
@@ -166,6 +161,10 @@ function readLocalStorage() {
             // maak een div aan voor een nieuw artikel in de tooltip
             let tooltipArticle = document.createElement('div');
             tooltipArticle.classList.add('one_tooltip_article');
+            tooltipArticle.dataset.articleId = leesLijstFetchedItem.ID;
+            tooltipArticle.dataset.articleLink = leesLijstFetchedItem.Link;
+            tooltipArticle.dataset.articleTitle = leesLijstFetchedItem.Title;
+            tooltipArticle.dataset.articleAuthor = leesLijstFetchedItem.Author;
 
             // maak een a tag en zet de href gelijk aan de link van het artikel
             let Articlelink = document.createElement('a');
