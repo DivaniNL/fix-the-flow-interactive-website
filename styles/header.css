@@ -173,7 +173,12 @@ body{
                             letter-spacing: 1px;
                         }
                         line-height: 2em;
-
+                        max-width: 100px;
+                        &:not(.link_leeslijst){
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
                         &:after {
                             content: '';
                             position: absolute;
