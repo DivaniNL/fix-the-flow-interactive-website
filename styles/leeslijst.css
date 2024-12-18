@@ -21,8 +21,11 @@ body#leesLijst {
                     margin-bottom: 4px;
                     letter-spacing: 2px;
                     font-family: 'Tiempos Text';
-                    font-size: 38px;
+                    font-size: 28px;
                     text-align: center;
+                    @media (min-width: 860px){
+                        font-size: 38px;
+                    }
                 }
             }
             .leesLijst{
@@ -30,7 +33,10 @@ body#leesLijst {
                 border-radius: 2px;
                 border: 1px solid var(--black);
                 background-color: #E1E1E1;
+                padding: 20px 30px;
+                @media (min-width: 860px){
                 padding: 73px 93px;
+                }
                 
                 >h4{
                     text-align: center;
@@ -79,11 +85,15 @@ body#leesLijst {
                         width: 24px;
                         height: 24px;
                         position: absolute;
-                        left: 100%;
+                        right: 0;
                         top: 50%;
                         translate: 0 -50%;
                         cursor: pointer;
                         pointer-events: all; /* Ensure the SVG can be clicked */
+                        @media (min-width: 860px){
+                            left: 100%;
+                            right: unset;
+                        }
                         > *{
                             fill: var(--black);
                             stroke: var(--black);
