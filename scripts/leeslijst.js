@@ -89,6 +89,7 @@ leesLijstBtns.forEach(function(leesLijstBtn) {
                         
                 }, 500);
             });
+            leesLijstTooltip.classList.add('active_tooltip');
             leesLijstTooltip.classList.add('slide-out');
             
         } else {
@@ -126,17 +127,21 @@ document.addEventListener('click', function closeTooltip(e) {
     // Controleer of de geklikte plek niet de tooltip, de link, of de sluitknop is
     if (
         !leesLijstTooltip.contains(e.target) &&
+        !document.querySelector('.utility_btn.bookmark').contains(e.target) &&
         !leesLijstNavItemLink.contains(e.target)
     ) {
         leesLijstTooltip.classList.remove('active_tooltip');
+        leesLijstTooltip.classList.remove('slide-out');
     }
 });
 // Als je op het kruisje in de leeslijst klikt gaat de leeslijst weer weg
 let tooltipCloseButton = document.querySelector('.tooltip_close');
 if (tooltipCloseButton) {
     tooltipCloseButton.addEventListener('click', function() {
+        console.log("test");
         let leesLijstTooltip = document.querySelector('.tooltip_leeslijst')
         leesLijstTooltip.classList.remove('active_tooltip');
+        leesLijstTooltip.classList.remove('slide-out');
     });
 }
 
