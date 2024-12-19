@@ -16,7 +16,7 @@ Voor Red Pers heb ik een intreractie toegevoegd die bestaat uit meerdere interac
 Artikellezers wil ik een leeslijst kunnen maken zodat ik artikels kan bewaren voor later, of later uit te kunnen lezen.
 Ook wil ik andere artikels kunnen aanklikken om deze ook toe te kunnen voegen, en de leeslijst zelf te kunnen bewerklen op de leeslijstpagina
 
-##Beschrijving
+## Beschrijving
 
 Hieronder licht ik per onderdeel van de interactie toe wat er gebeurt:
 
