@@ -260,7 +260,6 @@ body{
                                             display: none;
                                         }
                                         &.added{
-                                            background-color: rebeccapurple;
                                             animation-name:updated;
                                             animation-duration:.2s;
                                             animation-iteration-count:2;
