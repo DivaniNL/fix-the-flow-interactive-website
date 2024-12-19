@@ -76,6 +76,19 @@ https://github.com/user-attachments/assets/15f9a26b-289c-4dda-af2a-5892f1506410
 
 Ik heb ook een leeslijstpagina ontworpen en gebouwd. Op deze pagina is het de bedoeling dat de gebruiker alle artikelen die toegevoegd zijn aan de leeslijst kan zien. Ook kan een gebruiker hier naar dit artikel toe door op de link van het artikel te klikken. Tenslotte kan je op deze pagina ook artikels verwijderen uit de leeslijst.
 
+
+https://github.com/user-attachments/assets/02c17245-ec3d-430e-bcb6-2f600a6f8fcb
+
+
+
+
+
+https://github.com/user-attachments/assets/48433e23-6332-462c-b24b-54ae998fa79b
+
+
+
+
+
 Hieronder een video waarin te zien is dat ik een artikel verwijder.
 
 ## User Test
