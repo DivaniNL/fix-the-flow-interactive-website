@@ -97,6 +97,8 @@ Allereerst verdween de tooltip te snel na het toevoegen van een artikel. Het ver
 Daarnaast was het voor menige tester niet duidelijk waar de artikels zich bevinden. Hiervoor heb ik de links in de navigatie tijdelijk aangepast om de interactie beter te kunnen testen.
 
 ## Kenmerken
+
+### Manage Leeslijst
 Ik heb de leeslijst beheerd met een techniek genaamd localStorage. Met localStorage kan je waardes opslaan in je lokale bestander, per browser. Deze wordt gewist als je de browser afsluit.
 
 Als er item wordt toegevoegd aan de leeslijst verwerk ik dat op de volgende manier:
@@ -192,10 +194,17 @@ else {
 localStorage.setItem('leeslijst', JSON.stringify(leesLijst));
 ```
 4. Update daarna de leeslijst in de header tooltip:
+5. 
 [https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijst.js#L149-L216](https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijst.js#L149-L216)
 
 
-Hieronder is de functie te zien die uitgevoerd wordt als er op het vuilnisbakje naast een artikel op de leeslijstpagina wordt geklikt:
+### Leeslijst pagima
+
+Op de leeslijstpagina wordt op een soortgelijke manier als bij de header tooltip de leeslijst opgebouwd, alleen met andere elementen.  
+[https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijstPage.js#L61-L142](https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijstPage.js#L61-L142)
+
+Hieronder is de functie te zien die uitgevoerd wordt als er op het vuilnisbakje naast een artikel op de leeslijstpagina wordt geklikt:  
+
 [https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijstPage.js#L144-L213](https://github.com/DivaniNL/fix-the-flow-interactive-website/blob/main/scripts/leeslijstPage.js#L144-L213)
 
 ## Bronnen
