@@ -1,43 +1,25 @@
 # Fix The Flow
-Wireflow:
-https://www.figma.com/proto/iRa6q0esew1KVaDUgnzQdA/Fix-The-Flow-Sprint-5?page-id=4006%3A2688&node-id=4006-2768&node-type=frame&viewport=-4293%2C-1523%2C0.46&t=AjG4aKWqvB4922jo-1&scaling=min-zoom&content-scaling=fixed
 
-We hebben voor Red Pers een artikel detailpagina nagebouwt.
+Voor Red Pers heb ik een intreractie toegevoegd die bestaat uit meerdere interacties. Dit betreft een leeslijst waar bezoekers hun artikelen in kunnen opslaan en verwijderen.
 
 ## Inhoudsopgave Readme
 
-  * [Beschrijving](#beschrijving)
+  * [Ontwerpprobleem](#Ontwerpprobleem)
+  * [Beschrijving](#Beschrijving)
   * [Kenmerken](#kenmerken)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-### Ontwerpprobleem
+## Ontwerpprobleem
 
 Artikellezers wil ik een leeslijst kunnen maken zodat ik artikels kan bewaren voor later, of later uit te kunnen lezen.
 Ook wil ik andere artikels kunnen aanklikken om deze ook toe te kunnen voegen, en de leeslijst zelf te kunnen bewerklen op de leeslijstpagina
 
+##Beschrijving
 
+Hieronder licht ik per onderdeel van de interactie toe wat er gebeurt:
 
-
------------------
-
-
-
-
-Interactie presenteren in de Readme
-Na de lijst met de feedback die je hebt verwerkt ga je je interactie(s) presenteren. Dit doe je aan de hand van je Readme. Omdat je deze sprint een of meerdere interacties hebt gemaakt, kan je deze mooi tonen in de Readme en dit gebruiken om te presenteren. In de Readme schrijf je in principe niets over het proces dat je hebt doorlopen, maar focus je op het eindresultaat.
-
-Readme
-
-Titel
-Begin de Readme met een goede titel en een korte uitleg over de opdracht en wat je hebt gemaakt. Dit is het "ontwerpprobleem" en de "oplossing".
-
-Beschrijving
-Bij 'Beschrijving' komt te staan hoe je project er uit ziet, hoe het werkt en wat je er mee kan.
-
-___ HIERONDER AL GEDAANNNNN
-
-## Leeslijst button
+### Leeslijst button
 Als je een artikel wilt toevoegen aan de leeslijst klik je op de knop die hiervoor bestemd is.  
 
 <img width="198" alt="Scherm­afbeelding 2024-12-18 om 12 00 36" src="https://github.com/user-attachments/assets/e33e798c-c1a2-45ff-b5af-e43054c9d22a" />  
@@ -57,7 +39,7 @@ Na twee seconden veranderd de button naar de active state (nu kan de gebruiker w
 
 Ik heb feedback toegepast op de tijdelijk en de active state door de tekst aan te passen die in de button te zien is.
 
-## Leeslijst tooltip + menu item counter
+### Leeslijst tooltip + menu item counter
 
 Als er een artikel wordt toegevoegd aan de leeslijst wordt de leeslijst-tooltip getoond.
 In de navigatie wordt ook het aantal geupdatet in het rondje boven het linkje "Leeslijst".
@@ -93,6 +75,8 @@ https://github.com/user-attachments/assets/15f9a26b-289c-4dda-af2a-5892f1506410
 ## Leeslijstpagina
 
 Ik heb ook een leeslijstpagina ontworpen en gebouwd. Op deze pagina is het de bedoeling dat de gebruiker alle artikelen die toegevoegd zijn aan de leeslijst kan zien. Ook kan een gebruiker hier naar dit artikel toe door op de link van het artikel te klikken. Tenslotte kan je op deze pagina ook artikels verwijderen uit de leeslijst.
+
+Hieronder een video waarin te zien is dat ik een artikel verwijder.
 
 ## User Test
 
