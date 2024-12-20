@@ -6,7 +6,6 @@ const mediaQuery = window.matchMedia('(min-width: 860px)');
 let leesLijstBtns = document.querySelectorAll('.utility_btn.bookmark'); // Select all buttons
 function updateButtonState() {
     let leesLijst = JSON.parse(localStorage.getItem('leeslijst')) || []; // Get the leeslijst from localStorage
-
     // loop door de leeslijst.
     leesLijstBtns.forEach(function(leesLijstBtn, index) {
         let currentItemID = leesLijstBtn.dataset.articleId;

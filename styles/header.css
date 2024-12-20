@@ -179,13 +179,14 @@ body{
                             overflow: hidden;
                             white-space: nowrap;
                         }
+                        
                         &:after {
                             content: '';
                             position: absolute;
                             width: 100%;
                             transform: scaleX(0);
                             height: 2px;
-                            bottom: -3px;
+                            bottom: 0px;
                             left: 0;
                             background-color: var(--black);
                             transform-origin: bottom right;
@@ -193,12 +194,20 @@ body{
                         }
 
                         &:hover,
-                        &:focus,
-                        &.active {
+                        &:focus
+                        {
                             &:after {
                                 transform: scaleX(1);
                                 transform-origin: bottom left;
                             }
+                        }
+                        &.active{
+                            color: var(--red);
+                           
+                            &:after {
+                                background-color: var(--red);
+                            }
+                        
                         }
                     }
                     button{
