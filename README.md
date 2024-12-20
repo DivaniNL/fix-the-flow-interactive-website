@@ -3,6 +3,9 @@
 Voor Red Pers heb ik een intreractie toegevoegd die bestaat uit meerdere interacties. Dit betreft een leeslijst waar bezoekers hun artikelen in kunnen opslaan en verwijderen.
 [https://divaninl.github.io/fix-the-flow-interactive-website/](https://divaninl.github.io/fix-the-flow-interactive-website/)
 
+Artikel 2:
+[https://divaninl.github.io/fix-the-flow-interactive-website/stagiair.html](https://divaninl.github.io/fix-the-flow-interactive-website/stagiair.html)
+
 ## Inhoudsopgave Readme
 
   * [Ontwerpprobleem](#Ontwerpprobleem)
