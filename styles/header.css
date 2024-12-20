@@ -174,11 +174,7 @@ body{
                         }
                         line-height: 2em;
                         max-width: 100px;
-                        &:not(.link_leeslijst){
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
-                        }
+                        
                         
                         &:after {
                             content: '';
@@ -358,6 +354,13 @@ body{
                         top: calc(100% + 1px);
                         width: 100%;
                         background-color: var(--white);
+                        li{
+                            &:not(.link_leeslijst){
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
+                            }
+                        }
                     }
                 }
                 &.middlenav{
@@ -549,6 +552,9 @@ body{
                                 opacity: 1;
                             }
                         }
+                    }
+                    .openNewsletterPopupButton{
+                        height: 2em !important;
                     }
                 }
             }
